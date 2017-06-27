@@ -254,6 +254,10 @@ export default createQueryContainer(
             users: {
                 // read a prop and pass it to the query
                 params: (props) => ({ groupId: props.groupId }),
+
+                // can also use an array (will be extracted from props via _.pick):
+                params: ['groupId'],
+
                 query: 'groups.users.get',
             },
         },
